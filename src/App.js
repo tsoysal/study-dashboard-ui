@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles.css";
+import Introduce from "./Introduce";
+import StatusCard from "./statuscard";
+import NavMenu from "./navmenu";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="app-quote">
+        “Success is the sum of small efforts, repeated day in and day out.”
+      </h1>
+      <Introduce name="Elif" />
+      <div id="cards-container">
+        <StatusCard title="Soru" value="100" color="#E8995E" />
+        <StatusCard title="Paragraf" value="100" color="#6ECADF" />
+        <StatusCard title="Problem" value="100" color="#A1F2AC" />
+      </div>
+      <NavMenu />
     </div>
   );
 }
-
-export default App;
