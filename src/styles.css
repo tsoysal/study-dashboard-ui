@@ -1,18 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 
 body {
-  background: linear-gradient(to right top, #203d3b, #281e1d);
-  overflow: hidden;
+  background: linear-gradient(to right top, #203d3b, #281e1d) no-repeat;
 }
 
 .App {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   color: #f1f1f1;
-  padding: 25px;
+  padding: 5px 25px;
   text-align: center;
-  height: 100vh;
   overflow: hidden;
+  height: 100vh;
 }
 
 .app-quote {
@@ -117,4 +116,63 @@ body {
   align-items: center;
   padding: 10px;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1000px){
+  .App {
+    padding: 30px 100px;
+  }
+
+  .app-quote {
+    font-size: 24px;
+  }
+
+  #introduceSection {
+    height:40vh;
+  }
+
+  #introduceSection h1,
+  #introduceSection h3 {
+      font-size: 52px !important;
+  }
+
+
+  #cards-container {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-container {
+    margin: 0 20px;
+    min-width: 30%;
+    padding: 40px 30px;
+    position: relative;
+  }
+
+  #card-question-count {
+    font-size: 36px;
+    position: initial;
+    margin-top: 30px;
+  }
+
+  .card-graph {
+    margin-right: 50px;
+  }
+
+  .card-graph img{
+    width: 160%;
+  }
+
+  .card-content h3 {
+    font-size: 32px;
+  }
+
+  #card-description {
+    font-size: 16px;
+  }
+
+  .nav-container {
+    display: none;
+  }
 }
