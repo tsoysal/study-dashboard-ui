@@ -8,10 +8,26 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   color: #f1f1f1;
-  padding: 5px 25px;
   text-align: center;
   overflow: hidden;
   height: 100vh;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 800px) {
+  .App {
+    max-width: 600px;
+  }
+  #cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 70%;
+    align-content: center;
+  }
+  .card-container {
+    max-width: 400px;
+  }
 }
 
 .app-quote {
@@ -58,11 +74,12 @@ body {
   justify-content: space-between;
   background-color: rgba(80,80,80,0.5);
   border-radius: 35px;
-  max-width: 70vw;
   margin: 20px auto;
   padding: 17px 25px;
   color: white;
 }
+
+
 
 .card-content {
   text-align: start;
@@ -95,10 +112,14 @@ body {
 }
 
 .nav-container {
-  height: 10vh;
-  width: 100%;
+  max-width: 500px;
   display: flex;
   align-items: center;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .nav-container .nav-list {
@@ -120,59 +141,24 @@ body {
 
 @media screen and (min-width: 1000px){
   .App {
-    padding: 30px 100px;
+    max-width: 1000px;
+    padding: 0 10px;
   }
 
-  .app-quote {
-    font-size: 24px;
+  #introduceSection h1 {
+    font-size: 3rem;
   }
 
-  #introduceSection {
-    height:40vh;
-  }
-
-  #introduceSection h1,
   #introduceSection h3 {
-      font-size: 52px !important;
+    font-size: 1.2rem;
   }
-
 
   #cards-container {
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
   }
+
   .card-container {
-    margin: 0 20px;
-    min-width: 30%;
-    padding: 40px 30px;
-    position: relative;
+    width: 400px;
   }
-
-  #card-question-count {
-    font-size: 36px;
-    position: initial;
-    margin-top: 30px;
-  }
-
-  .card-graph {
-    margin-right: 50px;
-  }
-
-  .card-graph img{
-    width: 160%;
-  }
-
-  .card-content h3 {
-    font-size: 32px;
-  }
-
-  #card-description {
-    font-size: 16px;
-  }
-
-  .nav-container {
-    display: none;
-  }
+  
 }
